@@ -24,8 +24,8 @@ public class Gameplay extends JPanel implements KeyListener, ActionListener {
 	private int delay = 8;
 	
 	private int playerX = 310;
-	private int ballposX = 120;
-	private int ballposY = 350;
+	private int ballposX = 350;
+	private int ballposY = 530;
 	private int ballXdir = -1;
 	private int ballYdir = -2;
 	
@@ -155,6 +155,21 @@ public class Gameplay extends JPanel implements KeyListener, ActionListener {
 			}
 			else {
 				moveLeft();
+			}
+		}
+		if(e.getKeyCode() == KeyEvent.VK_ENTER) {
+			if(!play) {
+				play = true;
+				ballposX = 350;
+				ballposY = 530;
+				ballXdir = -1;
+				ballYdir = -2;
+				playerX = 310;
+				score = 0;
+				totalBricks = 21;
+				map = new MapGenerator(3 , 7);
+				
+				repaint();
 			}
 		}
 	}
