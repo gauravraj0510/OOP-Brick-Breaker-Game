@@ -1,6 +1,7 @@
 package brickBreaker;
 
 import java.awt.Color;
+import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.Rectangle;
@@ -52,6 +53,11 @@ public class Gameplay extends JPanel implements KeyListener, ActionListener {
 		g.fillRect(0, 0, 3, 592);
 		g.fillRect(0, 0, 692, 3);
 		g.fillRect(691, 0, 3, 592);
+		
+		//Scores
+		g.setColor(Color.WHITE);
+		g.setFont(new Font("serif", Font.BOLD, 25));
+		g.drawString(""+score,590,30);
 		
 		//Paddle
 		g.setColor(Color.green);
